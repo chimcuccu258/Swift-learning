@@ -17,6 +17,10 @@
 		0A708B082AE934AB00CB1B16 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A708B042AE934AB00CB1B16 /* Gilroy-SemiBold.ttf */; };
 		0A708B112AE935A200CB1B16 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A708B102AE935A200CB1B16 /* WelcomeView.swift */; };
 		0A708B132AE9372D00CB1B16 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A708B122AE9372D00CB1B16 /* Launch Screen.storyboard */; };
+		0A708B1C2AEA90AD00CB1B16 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B1B2AEA90AD00CB1B16 /* PhoneNumberKit */; };
+		0A708B1E2AEA90AD00CB1B16 /* PhoneNumberKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B1D2AEA90AD00CB1B16 /* PhoneNumberKit-Dynamic */; };
+		0A708B202AEA90AD00CB1B16 /* PhoneNumberKit-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B1F2AEA90AD00CB1B16 /* PhoneNumberKit-Static */; };
+		0A708B232AEA92EB00CB1B16 /* FlagKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B222AEA92EB00CB1B16 /* FlagKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A708B1C2AEA90AD00CB1B16 /* PhoneNumberKit in Frameworks */,
+				0A708B232AEA92EB00CB1B16 /* FlagKit in Frameworks */,
+				0A708B1E2AEA90AD00CB1B16 /* PhoneNumberKit-Dynamic in Frameworks */,
+				0A708B202AEA90AD00CB1B16 /* PhoneNumberKit-Static in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -151,6 +159,12 @@
 			dependencies = (
 			);
 			name = OnlineStore;
+			packageProductDependencies = (
+				0A708B1B2AEA90AD00CB1B16 /* PhoneNumberKit */,
+				0A708B1D2AEA90AD00CB1B16 /* PhoneNumberKit-Dynamic */,
+				0A708B1F2AEA90AD00CB1B16 /* PhoneNumberKit-Static */,
+				0A708B222AEA92EB00CB1B16 /* FlagKit */,
+			);
 			productName = OnlineStore;
 			productReference = 0A708AEE2AE92F5F00CB1B16 /* OnlineStore.app */;
 			productType = "com.apple.product-type.application";
@@ -179,6 +193,10 @@
 				Base,
 			);
 			mainGroup = 0A708AE52AE92F5F00CB1B16;
+			packageReferences = (
+				0A708B1A2AEA90AD00CB1B16 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */,
+				0A708B212AEA92EB00CB1B16 /* XCRemoteSwiftPackageReference "FlagKit" */,
+			);
 			productRefGroup = 0A708AEF2AE92F5F00CB1B16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -428,6 +446,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A708B1A2AEA90AD00CB1B16 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/PhoneNumberKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.7.4;
+			};
+		};
+		0A708B212AEA92EB00CB1B16 /* XCRemoteSwiftPackageReference "FlagKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/madebybowtie/FlagKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A708B1B2AEA90AD00CB1B16 /* PhoneNumberKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A708B1A2AEA90AD00CB1B16 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = PhoneNumberKit;
+		};
+		0A708B1D2AEA90AD00CB1B16 /* PhoneNumberKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A708B1A2AEA90AD00CB1B16 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = "PhoneNumberKit-Dynamic";
+		};
+		0A708B1F2AEA90AD00CB1B16 /* PhoneNumberKit-Static */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A708B1A2AEA90AD00CB1B16 /* XCRemoteSwiftPackageReference "PhoneNumberKit" */;
+			productName = "PhoneNumberKit-Static";
+		};
+		0A708B222AEA92EB00CB1B16 /* FlagKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A708B212AEA92EB00CB1B16 /* XCRemoteSwiftPackageReference "FlagKit" */;
+			productName = FlagKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A708AE62AE92F5F00CB1B16 /* Project object */;
 }
