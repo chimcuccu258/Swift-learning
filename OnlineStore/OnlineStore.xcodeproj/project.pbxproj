@@ -15,12 +15,15 @@
 		0A708B062AE934AB00CB1B16 /* Gilroy-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A708B022AE934AB00CB1B16 /* Gilroy-Bold.ttf */; };
 		0A708B072AE934AB00CB1B16 /* Gilroy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A708B032AE934AB00CB1B16 /* Gilroy-Regular.ttf */; };
 		0A708B082AE934AB00CB1B16 /* Gilroy-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0A708B042AE934AB00CB1B16 /* Gilroy-SemiBold.ttf */; };
-		0A708B112AE935A200CB1B16 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A708B102AE935A200CB1B16 /* WelcomeView.swift */; };
+		0A708B112AE935A200CB1B16 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A708B102AE935A200CB1B16 /* LoginView.swift */; };
 		0A708B132AE9372D00CB1B16 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A708B122AE9372D00CB1B16 /* Launch Screen.storyboard */; };
 		0A708B1C2AEA90AD00CB1B16 /* PhoneNumberKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B1B2AEA90AD00CB1B16 /* PhoneNumberKit */; };
 		0A708B1E2AEA90AD00CB1B16 /* PhoneNumberKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B1D2AEA90AD00CB1B16 /* PhoneNumberKit-Dynamic */; };
 		0A708B202AEA90AD00CB1B16 /* PhoneNumberKit-Static in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B1F2AEA90AD00CB1B16 /* PhoneNumberKit-Static */; };
 		0A708B232AEA92EB00CB1B16 /* FlagKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0A708B222AEA92EB00CB1B16 /* FlagKit */; };
+		0A89382B2AF08EF3001B2E81 /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89382A2AF08EF3001B2E81 /* UIExtension.swift */; };
+		0A89382D2AF097CD001B2E81 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89382C2AF097CD001B2E81 /* RoundButton.swift */; };
+		0A89382F2AF09FFB001B2E81 /* SigninView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A89382E2AF09FFB001B2E81 /* SigninView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +37,11 @@
 		0A708B022AE934AB00CB1B16 /* Gilroy-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Bold.ttf"; path = "../../../../online_groceries_shop_app_flutter/assets/font/Gilroy-Bold.ttf"; sourceTree = "<group>"; };
 		0A708B032AE934AB00CB1B16 /* Gilroy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-Regular.ttf"; path = "../../../../online_groceries_shop_app_flutter/assets/font/Gilroy-Regular.ttf"; sourceTree = "<group>"; };
 		0A708B042AE934AB00CB1B16 /* Gilroy-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Gilroy-SemiBold.ttf"; path = "../../../../online_groceries_shop_app_flutter/assets/font/Gilroy-SemiBold.ttf"; sourceTree = "<group>"; };
-		0A708B102AE935A200CB1B16 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		0A708B102AE935A200CB1B16 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0A708B122AE9372D00CB1B16 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		0A89382A2AF08EF3001B2E81 /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		0A89382C2AF097CD001B2E81 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		0A89382E2AF09FFB001B2E81 /* SigninView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,8 @@
 		0A708B0E2AE9356200CB1B16 /* UICommon */ = {
 			isa = PBXGroup;
 			children = (
+				0A89382A2AF08EF3001B2E81 /* UIExtension.swift */,
+				0A89382C2AF097CD001B2E81 /* RoundButton.swift */,
 			);
 			path = UICommon;
 			sourceTree = "<group>";
@@ -138,7 +146,8 @@
 		0A708B0F2AE9359300CB1B16 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				0A708B102AE935A200CB1B16 /* WelcomeView.swift */,
+				0A708B102AE935A200CB1B16 /* LoginView.swift */,
+				0A89382E2AF09FFB001B2E81 /* SigninView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -229,8 +238,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A708AF42AE92F5F00CB1B16 /* ContentView.swift in Sources */,
-				0A708B112AE935A200CB1B16 /* WelcomeView.swift in Sources */,
+				0A89382D2AF097CD001B2E81 /* RoundButton.swift in Sources */,
+				0A89382F2AF09FFB001B2E81 /* SigninView.swift in Sources */,
+				0A708B112AE935A200CB1B16 /* LoginView.swift in Sources */,
 				0A708AF22AE92F5F00CB1B16 /* OnlineStoreApp.swift in Sources */,
+				0A89382B2AF08EF3001B2E81 /* UIExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
