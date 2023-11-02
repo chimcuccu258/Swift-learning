@@ -1,7 +1,6 @@
 //
 //  LoginView.swift
 //  OnlineStore
-//
 //  Created by Nga Vũ on 25/10/2023.
 //
 
