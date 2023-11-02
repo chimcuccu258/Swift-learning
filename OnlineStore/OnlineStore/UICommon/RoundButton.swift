@@ -22,7 +22,7 @@ struct RoundButton: View {
                 .multilineTextAlignment(.center)
             
         }
-        .frame(width: 300, height: 50)
+        .frame(width: .screenWidth * 0.75, height: .screenHeight * 0.06)
         .background( Color.primaryApp)
         .cornerRadius(10)
     }
