@@ -1,21 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "flagkit",
+      "identity" : "countrypicker",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/madebybowtie/FlagKit.git",
+      "location" : "https://github.com/mobven/CountryPicker.git",
       "state" : {
-        "revision" : "f12111d91902d23fd1d9cc7ad9198030b049795d",
-        "version" : "2.4.0"
-      }
-    },
-    {
-      "identity" : "phonenumberkit",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/marmelroy/PhoneNumberKit.git",
-      "state" : {
-        "revision" : "b456f2f9be10c1d183158220b831afd22697dd68",
-        "version" : "3.7.4"
+        "revision" : "6225c2933fea6abdb8171718b22bbe289706a7aa",
+        "version" : "2.0.3"
       }
     }
   ],

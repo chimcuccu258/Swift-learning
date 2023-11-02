@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
-import PhoneNumberKit
-import FlagKit
+import CountryPicker
 
 struct LoginView: View {
-    @State private var phoneNumber = ""
-    let phoneNumberKit = PhoneNumberKit()
-    let countryCode = "+84"
+    @State var phoneNumber = ""
+    @State var isShowPicker: Bool = false
+    @State var countryObj: Country?
     
     var body: some View {
         ZStack {
@@ -22,13 +21,6 @@ struct LoginView: View {
                 .frame(maxWidth: .screenWidth, maxHeight: .screenHeight, alignment: .top)
             
             ZStack {
-                Rectangle()
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .screenWidth, maxHeight: .screenHeight, alignment: .bottom)
-                    .cornerRadius(15)
-                    .padding(.top, 250)
-                    .shadow(color: .gray, radius: 5, x: 0, y: 0)
-                
                 VStack {
                     Text("Chào mừng bạn đến với")
                         .font(.system(size: 16, design: .default))
@@ -45,18 +37,26 @@ struct LoginView: View {
                         .padding(.vertical, 30)
                     
                     HStack {
-                        if let flagImage = Flag(countryCode: "VN")?.image(style: .roundedRect) {
-                            Image(uiImage: flagImage)
-                                .frame(width: 30, height: 20)
+                        Button {
+                            isShowPicker = true
+                        } label: {
+                            if let countryObj = countryObj {
+                                Text("\(countryObj.isoCode.getFlag())")
+                                    .font(.customfont(.medium, fontSize: 18))
+                                    .foregroundColor(.primaryText)
+                                
+                                Text("\(countryObj.phoneCode)")
+                                    .font(.customfont(.medium, fontSize: 18))
+                                    .foregroundColor(.primaryText)
+                            }
                         }
                         
-                        Text("\(countryCode)")
-                            .font(.system(size: 16, design: .default))
-                            .foregroundColor(.black)
                         Divider()
                             .frame(height: 20)
-                        TextField("", text: $phoneNumber)
-                            .font(.system(size: 16, design: .default))
+                        
+                        TextField("Số điện thoại", text: $phoneNumber)
+                            .frame(minWidth: 0, maxWidth: .infinity)
+                            .font(.system(size: 18, design: .default))
                             .foregroundColor(.black)
                             .padding(.leading, 10)
                             .keyboardType(.numberPad)
@@ -65,14 +65,6 @@ struct LoginView: View {
                                     phoneNumber = String(newValue.prefix(9))
                                 }
                             }
-                            .overlay(
-                                Text("Số điện thoại")
-                                    .font(.system(size: 16, design: .default))
-                                    .foregroundColor(.gray)
-                                    .opacity(phoneNumber.isEmpty ? 1 : 0)
-                                    .padding(.leading, 15),
-                                alignment: .leading
-                            )
                     }
                     .padding(.horizontal, 40)
                     
@@ -128,7 +120,6 @@ struct LoginView: View {
                         }
                     }
                     .frame(width: 300, height: 50)
-                    .background(.white.opacity(0.5))
                     .overlay(
                         RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.blue, lineWidth: 1)
@@ -137,6 +128,12 @@ struct LoginView: View {
                 }
             }
         }
+        .onAppear {
+            self.countryObj = Country(phoneCode: "+84", isoCode: "VN")
+        }
+        .sheet(isPresented: $isShowPicker, content: {
+            CountryPicker(country: $countryObj)
+        })
         .navigationTitle("")
         .navigationBarBackButtonHidden(true)
         .navigationBarHidden(true)

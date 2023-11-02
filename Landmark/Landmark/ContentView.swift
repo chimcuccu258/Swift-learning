@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  OnlineStore
+//  Landmark
 //
-//  Created by Nga Vũ on 25/10/2023.
+//  Created by Nga Vũ on 16/10/2023.
 //
 
 import SwiftUI
@@ -12,7 +12,7 @@ struct ContentView: View {
         VStack {
             Image(systemName: "globe")
                 .imageScale(.large)
-//                .foregroundStyle(.tint)
+                .foregroundStyle(.tint)
             Text("Hello, world!")
         }
         .padding()
